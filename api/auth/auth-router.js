@@ -40,7 +40,6 @@ router.post('/login', jsonParser, (req, res) => {
   } else {
     username = userData.username;
     Users.readUserByName(username)
-      .first()
       .then(user => {
         if (!process.env.NO_LOGGER) console.log(`TCL: login -> user found\n`, user);
         if (user) {
