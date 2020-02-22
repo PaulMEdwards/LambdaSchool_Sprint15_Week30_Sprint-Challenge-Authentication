@@ -4,10 +4,10 @@
   "description": "Authentication Sprint Challenge",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env DB_ENV=testing jest",
-    "test:watch": "cross-env DB_ENV=testing NO_LOGGER=true jest --watch --runInBand --detectOpenHandles",
+    "test": "cross-env NODE_ENV=testing jest",
+    "test:watch": "cross-env NODE_ENV=testing NO_LOGGER=true jest --watch --runInBand --detectOpenHandles",
     "server": "nodemon index.js",
-    "server:testing": "cross-env DB_ENV=testing nodemon index.js"
+    "server:testing": "cross-env NODE_ENV=testing nodemon index.js"
   },
   "jest": {
     "testEnvironment": "node"
