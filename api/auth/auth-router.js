@@ -33,7 +33,7 @@ router.post('/register', jsonParser, (req, res) => {
 
 router.post('/login', jsonParser, (req, res) => {
   let userData = req.body;
-  if (!process.env.NO_LOGGER) console.log(`TCL: login -> user input`, userData);
+  if (!process.env.NO_LOGGER) console.log(`TCL: login -> user input\n`, userData);
 
   if (!userData.username || !userData.password) {
     res.status(400).json({ message: `Required data missing` });
