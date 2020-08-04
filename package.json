@@ -4,28 +4,47 @@
   "description": "Authentication Sprint Challenge",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon index.js"
+    "test": "cross-env NODE_ENV=testing jest",
+    "test:watch": "cross-env NODE_ENV=testing NO_LOGGER=true jest --watch --runInBand --detectOpenHandles",
+    "test:watch:withLogs": "cross-env NODE_ENV=testing jest --watch --runInBand --detectOpenHandles",
+    "server": "nodemon index.js",
+    "server:testing": "cross-env NODE_ENV=testing nodemon index.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LambdaSchool/Sprint-Challenge-Authentication.git"
+    "url": "git+https://github.com/PaulMEdwards/LambdaSchool_Sprint15_Week30_Sprint-Challenge-Authentication/.git"
   },
   "keywords": [],
-  "author": "Lambda School",
+  "author": "Paul M Edwards, Student, Lambda School",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LambdaSchool/Sprint-Challenge-Authentication/issues"
+    "url": "https://github.com/PaulMEdwards/LambdaSchool_Sprint15_Week30_Sprint-Challenge-Authentication//issues"
   },
-  "homepage": "https://github.com/LambdaSchool/Sprint-Challenge-Authentication#readme",
-  "dependencies": {
-    "axios": "^0.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "helmet": "^3.21.2",
-    "knex": "^0.20.4",
-    "sqlite3": "^4.1.1"
-  },
+  "homepage": "https://github.com/PaulMEdwards/LambdaSchool_Sprint15_Week30_Sprint-Challenge-Authentication/#readme",
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-session-knex": "^1.5.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "helmet": "^3.21.2",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.20.10",
+    "knex-cleaner": "^1.3.0",
+    "moment": "^2.24.0",
+    "nodemon": "^2.0.2",
+    "sqlite3": "^4.1.1"
   }
 }
